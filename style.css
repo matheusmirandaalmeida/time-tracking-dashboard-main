@@ -1,0 +1,117 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+:root {
+    /* Primary */
+    --cor_blue: hsl(246, 80%, 60%);
+    --lightorange: hsl(15, 100%, 70%);
+    --loftblue:hsl(195, 74%, 62%);
+    --Lightred:  hsl(348, 100%, 68%);
+    --Limegreen: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Softorange: hsl(43, 84%, 65%);
+
+    /* Neutral */
+    --Verydark: hsl(226, 43%, 10%);
+    --Darkblue: hsl(235, 46%, 20%);
+    --Desaturated: hsl(235, 45%, 61%);
+    --Pale: hsl(236, 100%, 87%);
+}
+
+body {
+  box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    background: var(--Verydark);
+
+}
+
+.container-conntent {
+    display: grid;
+    /* width: 791px; */
+    height: 400px;
+    justify-content: center;
+}
+
+.container-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, .1fr);
+  grid-template-areas:
+      "cantoEsquerdo topoE topoD cantoDireito"
+      "cantoEsquerdo meioE meioD baixoDireito";
+  gap: 10px;
+  height: 100vh;
+  width: 60vw;
+  background: var(--Verydark);
+  /* align-items: center; */
+  align-content: center;
+} 
+
+
+ .cantoEsquerdo {
+  grid-area: cantoEsquerdo;
+  background: var(--cor_blue);
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.orange {
+    background: var(--lightorange);
+}
+.topoE {
+  grid-area: topoE;
+}
+
+.lightblue {
+    background: var(--loftblue);
+}
+.topoD {
+  grid-area: topoD;  
+}
+
+.red {
+    background: var(--Lightred);
+}
+.cantoDireito {
+  grid-area: cantoDireito;
+}
+
+.green{
+    background: var(--Limegreen);
+}
+.meioE {
+  grid-area: meioE;
+}
+
+.purple {
+    background: var(--Violet);
+}
+.meioD {
+  grid-area: meioD;
+}
+
+.yellow {
+    background: var(--Softorange);
+}
+.baixoDireito {
+  grid-area: baixoDireito;
+}
+
+
+.container-block {
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  height: 8rem;
+  border: 1px solid #000;
+  max-width: 15rem;
+  margin: 0 auto;
+  background: var(--Darkblue);
+}
