@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 18px;
+  box-sizing: border-box;
 }
 
 :root {
@@ -24,47 +25,58 @@ body {
 
 body {
   box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    height: 100vh;
-    display: grid;
-    justify-items: center;
-    background: var(--Verydark);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  background: var(--Verydark);
 
 }
 
-.container-conntent {
-    display: grid;
-    /* width: 791px; */
-    height: 400px;
-    justify-content: center;
+.container-content {
+  display: flex;
+  height: 100vh;
+  max-width: 1000px;
+  place-content: center;
+  /* border: 1px solid red; */
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.container-esquerdo {
+
 }
 
 .container-main {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, .1fr);
   grid-template-areas:
-      "cantoEsquerdo topoE topoD cantoDireito"
-      "cantoEsquerdo meioE meioD baixoDireito";
-  gap: 10px;
-  height: 100vh;
-  width: 60vw;
+      "topoE topoD cantoDireito"
+      "meioE meioD baixoDireito";
+  gap: 16px;
+  height: 66vh;
+  max-width: 55vw;
   background: var(--Verydark);
   /* align-items: center; */
   align-content: center;
-} 
-
-
- .cantoEsquerdo {
-  grid-area: cantoEsquerdo;
-  background: var(--cor_blue);
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
+  /* border: 1px solid white; */
+  overflow: hidden;
 }
+
+.cantoEsquerdo {
+  height: 294px;
+  background: var(--Darkblue);
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
 
 .orange {
     background: var(--lightorange);
+    border-radius: 10%;
 }
 .topoE {
   grid-area: topoE;
@@ -72,6 +84,7 @@ body {
 
 .lightblue {
     background: var(--loftblue);
+    border-radius: 10%;
 }
 .topoD {
   grid-area: topoD;  
@@ -79,6 +92,7 @@ body {
 
 .red {
     background: var(--Lightred);
+    border-radius: 10%;
 }
 .cantoDireito {
   grid-area: cantoDireito;
@@ -86,6 +100,7 @@ body {
 
 .green{
     background: var(--Limegreen);
+    border-radius: 10%;
 }
 .meioE {
   grid-area: meioE;
@@ -93,6 +108,7 @@ body {
 
 .purple {
     background: var(--Violet);
+    border-radius: 10%;
 }
 .meioD {
   grid-area: meioD;
@@ -100,6 +116,7 @@ body {
 
 .yellow {
     background: var(--Softorange);
+    border-radius: 10%;
 }
 .baixoDireito {
   grid-area: baixoDireito;
@@ -109,9 +126,10 @@ body {
 .container-block {
   display: grid;
   /* grid-template-columns: 1fr; */
-  height: 8rem;
+  height: 12rem;
   border: 1px solid #000;
   max-width: 15rem;
   margin: 0 auto;
   background: var(--Darkblue);
+  border-radius: 10%;
 }
